@@ -1,7 +1,6 @@
-package com.alita.string;
+package com.alita.base;
 
 import com.alita.Random;
-import com.alita.base.BaseRandom;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -15,23 +14,22 @@ public class StringRandomTest {
 
     @Test
     public void randomStr() {
-        String str = Random.string();
-        System.out.println(str);
+        String str = Random.rString();
+        Assert.assertEquals(str.length(), 5);
     }
 
     @Test
     public void randomStrSize() {
         int size = 10;
-        String str = Random.string(size);
-        System.out.println(str);
+        String str = Random.rString(size);
         Assert.assertEquals(str.length(), size);
     }
 
     @Test
     public void randomStrMinAndMaxSize() {
-        for (int i = 0; i < 10; i++) {
-            String str = Random.string(5, 10);
-            System.out.println(str);
-        }
+        int min = 5;
+        int max = 10;
+        String str = Random.rString(min, max);
+        Assert.assertTrue(min <= str.length() && str.length() <= max);
     }
 }

@@ -1,8 +1,4 @@
-package com.alita.lang;
-
-import com.alita.base.BaseRandom;
-
-import java.util.concurrent.ThreadLocalRandom;
+package com.alita.base;
 
 /**
  * @Description: 随机数字
@@ -72,22 +68,9 @@ public class NumberRandom {
     }
 
     /**
-     * 获得指定范围内的随机数
-     *
-     * @param min 最小数（包含）
-     * @param max 最大数（不包含）
-     * @return 随机数
-     */
-    public static double randomDouble(double min, double max) {
-        return BaseRandom.getRandom().nextDouble(min, max);
-    }
-
-    /**
      * 获得随机数[0, 1)
      *
      * @return 随机数
-     * @see ThreadLocalRandom#nextDouble()
-     * @since 3.3.0
      */
     public static double randomDouble() {
         return BaseRandom.getRandom().nextDouble();
@@ -98,10 +81,19 @@ public class NumberRandom {
      *
      * @param limit 限制随机数的范围，不包括这个数
      * @return 随机数
-     * @see ThreadLocalRandom#nextDouble(double)
-     * @since 3.3.0
      */
     public static double randomDouble(double limit) {
         return BaseRandom.getRandom().nextDouble(limit);
+    }
+
+    /**
+     * 获得指定范围内的随机数
+     *
+     * @param min 最小数（包含）
+     * @param max 最大数（不包含）
+     * @return 随机数
+     */
+    public static double randomDouble(double min, double max) {
+        return BaseRandom.getRandom().nextDouble(min, max);
     }
 }

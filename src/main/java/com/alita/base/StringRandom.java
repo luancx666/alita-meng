@@ -1,6 +1,4 @@
-package com.alita.lang;
-
-import com.alita.base.BaseRandom;
+package com.alita.base;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -27,20 +25,20 @@ public class StringRandom {
     /**
      * 根据指定字符串生成指定长度的随机字符串
      *
-     * @param baseString 指定字符串
-     * @param length     指定长度
+     * @param baseStr 指定字符串
+     * @param length  指定长度
      * @return 随机字符串
      */
-    public static String str(String baseString, int length) {
+    public static String str(String baseStr, int length) {
         if (length < 1) {
             length = 1;
         }
         StringBuilder sb = new StringBuilder();
         ThreadLocalRandom random = BaseRandom.getRandom();
-        int baseLength = baseString.length();
+        int baseLength = baseStr.length();
 
         for (int i = 0; i < length; i++) {
-            sb.append(baseString.charAt(random.nextInt(baseLength)));
+            sb.append(baseStr.charAt(random.nextInt(baseLength)));
         }
         return sb.toString();
     }
