@@ -36,6 +36,17 @@
     "natural": "@natural(60, 100)",//60 到 100 的自然数
     "boolean": "@boolean" //boolean 类型 true,false
   },
+    <!--姓名-->
+    "name": {
+      "first": "@first",//姓
+      "last": "@last",//名
+      "name": "@name",//姓名
+      "cfirst": "@cfirst",
+      "clast": "@clast",
+      "cname": "@cname"
+    },
+
+    ====== 待完成 =====
   <!--时间类型-->
   "date": {
     "date": "@date",//1982-07-20
@@ -65,15 +76,6 @@
     "csentence": "@csentence(3, 5)",
     "cword": "@cword('零一二三四五六七八九十', 5, 7)",
     "ctitle": "@ctitle(3, 5)"
-  },
-  <!--姓名-->
-  "name": {
-    "first": "@first",//姓
-    "last": "@last",//名
-    "name": "@name",//姓名
-    "cfirst": "@cfirst",
-    "clast": "@clast",
-    "cname": "@cname"
   },
   <!--网站-->
   "web": {

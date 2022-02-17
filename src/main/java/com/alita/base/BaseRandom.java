@@ -48,6 +48,23 @@ public class BaseRandom {
      * 用于随机选的字符和数字
      */
     public static final String BASE_CHAR_NUMBER = BASE_CHAR_LOWER + BASE_CHAR_UPPER + BASE_NUMBER;
+
+    /**
+     * 获取随机数生成器对象<br>
+     * ThreadLocalRandom是JDK 7之后提供并发产生随机数，能够解决多个线程发生的竞争争夺。
+     *
+     * <p>
+     * 注意：此方法返回的{@link ThreadLocalRandom}不可以在多线程环境下共享对象，否则有重复随机数问题。
+     * 见：https://www.jianshu.com/p/89dfe990295c
+     * </p>
+     *
+     * @return {@link ThreadLocalRandom}
+     * @since 3.1.2
+     */
+    public static ThreadLocalRandom getRandom() {
+        return ThreadLocalRandom.current();
+    }
+
     /**
      * 常见英文名
      */
@@ -56,10 +73,12 @@ public class BaseRandom {
             "Betty", "Helen", "Sandra", "Donna", "Carol", "Ruth", "Sharon", "Michelle", "James", "John",
             "Robert", "Michael", "William", "David", "Richard", "Charles", "Joseph", "Thomas", "Christopher",
             "Daniel", "Paul", "Mark", "Donald", "George", "Kenneth", "Steven", "Edward", "Brian");
+
     /**
      * 常见中文姓氏
      */
     public static final String C_SURNAME = "李王张刘陈杨黄赵周吴徐孙朱马胡郭林何高梁郑罗宋谢唐韩曹许邓萧史石叶";
+
     /**
      * 常用名字
      */
@@ -69,6 +88,7 @@ public class BaseRandom {
             "圣贤洪太夫振田锰由强礼允兆商升效光蕊华奎魏敏齐子村青杜煜潜赟孟荣正季坤来祥学武车慧全浩彩卫敬公彬杰兰佳兴兵轶海好腾蕾" +
             "松长卿宁征善薄超文辉玉安冉斌美福宏宗龙香厚涛军薛辛宝群润涧宫玮妮冯侯新冰辰玲莲冲涵段家德冷边莹方殿秀淄毅寇俊秋富双巍" +
             "金发淑近燕志姚姜远连迟忠翠信姣凤巨巩召旭路可凯柱菲";
+
     /**
      * 常用中文
      */
@@ -112,20 +132,4 @@ public class BaseRandom {
             "漏伐休弓缓鼓演引编众优缘伙会缝伞弟鼠漠缠伤弦缩伪漫伯弯估弱伴缴伶伸缸弹缺鼻似但位低住罐网归当体录余罚佛作你形罢佣轧" +
             "轨佩罩罪转轮置潮软轰影役彻轻彼载齿使轿往较侄径龄待辅辆很辈羊例律侍徒输得供辜依羞辞龟辟御羡澡辣侦侧侨辨辩循辫侮微辱" +
             "侵辽羽达便激迁翁心促必迅翅忆过迈忌忍迎运返俗还忘俘忙这进违保忧俩快迫俭修俯述俱念迷迹翻翼忽追";
-
-    /**
-     * 获取随机数生成器对象<br>
-     * ThreadLocalRandom是JDK 7之后提供并发产生随机数，能够解决多个线程发生的竞争争夺。
-     *
-     * <p>
-     * 注意：此方法返回的{@link ThreadLocalRandom}不可以在多线程环境下共享对象，否则有重复随机数问题。
-     * 见：https://www.jianshu.com/p/89dfe990295c
-     * </p>
-     *
-     * @return {@link ThreadLocalRandom}
-     * @since 3.1.2
-     */
-    public static ThreadLocalRandom getRandom() {
-        return ThreadLocalRandom.current();
-    }
 }
