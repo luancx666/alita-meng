@@ -3,6 +3,7 @@ package com.alita;
 import com.alita.base.BooleanRandom;
 import com.alita.base.NumberRandom;
 import com.alita.base.StringRandom;
+import com.alita.complex.ColorRandom;
 import com.alita.complex.DateRandom;
 import com.alita.complex.IdRandom;
 import com.alita.complex.NameRandom;
@@ -314,5 +315,16 @@ public class Random {
      */
     public static String rSnowflakeIdString() {
         return IdRandom.snowflakeIdString();
+    }
+
+    //↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓  颜色  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+
+    /**
+     * 随机16进制颜色值  #79E0F2
+     *
+     * @return 16进制颜色值
+     */
+    public static String rColor() {
+        return ColorRandom.randomColor();
     }
 }
