@@ -3,8 +3,11 @@ package com.alita;
 import com.alita.base.BooleanRandom;
 import com.alita.base.NumberRandom;
 import com.alita.base.StringRandom;
+import com.alita.complex.DateRandom;
 import com.alita.complex.IdRandom;
 import com.alita.complex.NameRandom;
+
+import java.util.Date;
 
 /**
  * @Description: 模拟数据总入口
@@ -169,6 +172,98 @@ public class Random {
      */
     public static String rLast() {
         return NameRandom.randomLast();
+    }
+
+    //↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓  时间  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+
+    /**
+     * 当前时间
+     *
+     * @return 当前时间
+     */
+    public static Date now() {
+        return DateRandom.now();
+    }
+
+    /**
+     * 当前时间
+     *
+     * @return 当前时间
+     */
+    public static String nowString() {
+        return DateRandom.nowString();
+    }
+
+    /**
+     * 格式化当前时间
+     *
+     * @param format 日期格式
+     * @return 当前时间
+     */
+    public static String nowString(String format) {
+        return DateRandom.nowString(format);
+    }
+
+    /**
+     * 获取随机时间 (开始时间 2015-01-01 至 当前时间)
+     *
+     * @return 获取随机时间
+     */
+    public static Date rDate() {
+        return DateRandom.randomDate();
+    }
+
+    /**
+     * 获取随机时间 (开始时间 2015-01-01 至 当前时间)
+     *
+     * @return 获取随机时间
+     */
+    public static String rDateString() {
+        return DateRandom.randomDateString();
+    }
+
+    /**
+     * 随机格式化时间 (开始时间 2015-01-01 至 当前时间)
+     *
+     * @param format 日期格式
+     * @return 随机格式化时间
+     */
+    public static String rDateString(String format) {
+        return DateRandom.randomDateString(format);
+    }
+
+    /**
+     * 获取指定时间范围内的随机时间
+     *
+     * @param start 开始时间
+     * @param end   结束时间
+     * @return 指定时间范围内的随机时间
+     */
+    public static Date rDate(long start, long end) {
+        return DateRandom.randomDate(start, end);
+    }
+
+    /**
+     * 获取指定时间范围内的随机时间
+     *
+     * @param start 开始时间
+     * @param end   结束时间
+     * @return 指定时间范围内的随机时间
+     */
+    public static String rDateString(long start, long end) {
+        return DateRandom.randomDateString(start, end);
+    }
+
+    /**
+     * 获取指定时间范围内的随机时间
+     *
+     * @param start  开始时间
+     * @param end    结束时间
+     * @param format 日期格式
+     * @return 指定时间范围内的随机时间
+     */
+    public static String rDateString(long start, long end, String format) {
+        return DateRandom.randomDateString(start, end, format);
     }
 
     //↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓  中文  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
