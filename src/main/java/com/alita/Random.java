@@ -3,10 +3,7 @@ package com.alita;
 import com.alita.base.BooleanRandom;
 import com.alita.base.NumberRandom;
 import com.alita.base.StringRandom;
-import com.alita.complex.ColorRandom;
-import com.alita.complex.DateRandom;
-import com.alita.complex.IdRandom;
-import com.alita.complex.NameRandom;
+import com.alita.complex.*;
 
 import java.util.Date;
 
@@ -296,6 +293,161 @@ public class Random {
         return NameRandom.randomCLast();
     }
 
+
+    //↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓  TEXT  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+
+    /**
+     * 随机生成单词
+     *
+     * @return 随机单词
+     */
+    public static String rWord() {
+        return TextRandom.randomWord();
+    }
+
+    /**
+     * 随机生成单词
+     *
+     * @return 随机单词
+     */
+    public static String rWord(int minLength, int maxLength) {
+        return TextRandom.randomWord(minLength, maxLength);
+    }
+
+    /**
+     * 随机标题
+     *
+     * @return 随机标题
+     */
+    public static String rTitle() {
+        return TextRandom.randomTitle();
+    }
+
+    /**
+     * 随机标题
+     *
+     * @return 随机标题
+     */
+    public static String rTitle(int minLength, int maxLength) {
+        return TextRandom.randomTitle(minLength, maxLength);
+    }
+
+    /**
+     * 生成随机短句
+     *
+     * @return 随机短句
+     */
+    public static String rSentence() {
+        return TextRandom.randomSentence();
+    }
+
+    /**
+     * 生成随机短句
+     *
+     * @return 随机短句
+     */
+    public static String rSentence(int minLength, int maxLength) {
+        return TextRandom.randomSentence(minLength, maxLength);
+    }
+
+    /**
+     * 随机生成段落
+     *
+     * @return 随机段落
+     */
+    public static String rParagraph() {
+        return TextRandom.randomParagraph();
+    }
+
+    /**
+     * 随机生成段落
+     *
+     * @return 随机段落
+     */
+    public static String rParagraph(int minLength, int maxLength) {
+        return TextRandom.randomParagraph(minLength, maxLength);
+    }
+
+    /**
+     * 随机生成中文
+     *
+     * @return 随机中文
+     */
+    public static String rCWord() {
+        return TextRandom.randomCWord();
+    }
+
+    /**
+     * 随机生成中文
+     *
+     * @return 随机中文
+     */
+    public static String rCWord(int minLength, int maxLength) {
+        return TextRandom.randomCWord(minLength, maxLength);
+    }
+
+    /**
+     * 随机生成中文
+     *
+     * @return 随机中文
+     */
+    public static String rCWord(String baseStr, int minLength, int maxLength) {
+        return TextRandom.randomCWord(baseStr, minLength, maxLength);
+    }
+
+    /**
+     * 随机标题
+     *
+     * @return 随机标题
+     */
+    public static String rCTitle() {
+        return TextRandom.randomCTitle();
+    }
+
+    /**
+     * 随机标题
+     *
+     * @return 随机标题
+     */
+    public static String rCTitle(int minLength, int maxLength) {
+        return TextRandom.randomCTitle(minLength, maxLength);
+    }
+
+    /**
+     * 生成随机短句
+     *
+     * @return 随机短句
+     */
+    public static String rCSentence() {
+        return TextRandom.randomCSentence();
+    }
+
+    /**
+     * 生成随机短句
+     *
+     * @return 随机短句
+     */
+    public static String rCSentence(int minLength, int maxLength) {
+        return TextRandom.randomCSentence(minLength, maxLength);
+    }
+
+    /**
+     * 随机生成段落
+     *
+     * @return 随机段落
+     */
+    public static String rCParagraph() {
+        return TextRandom.randomCParagraph();
+    }
+
+    /**
+     * 随机生成段落
+     *
+     * @return 随机段落
+     */
+    public static String rCParagraph(int minLength, int maxLength) {
+        return TextRandom.randomCParagraph(minLength, maxLength);
+    }
 
     //↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓  ID  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 

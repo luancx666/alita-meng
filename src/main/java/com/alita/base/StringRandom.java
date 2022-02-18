@@ -1,7 +1,5 @@
 package com.alita.base;
 
-import java.util.concurrent.ThreadLocalRandom;
-
 /**
  * @Description: 随机字符串
  * @Author: Luancx
@@ -15,9 +13,6 @@ public class StringRandom {
     }
 
     public static String str(int minLength, int maxLength) {
-        if (minLength == 0 || maxLength == 0 || minLength >= maxLength) {
-            return str(5);
-        }
         int anInt = BaseRandom.getRandom().nextInt(minLength, maxLength);
         return str(BaseRandom.BASE_CHAR_NUMBER, anInt);
     }
@@ -34,11 +29,10 @@ public class StringRandom {
             length = 1;
         }
         StringBuilder sb = new StringBuilder();
-        ThreadLocalRandom random = BaseRandom.getRandom();
         int baseLength = baseStr.length();
 
         for (int i = 0; i < length; i++) {
-            sb.append(baseStr.charAt(random.nextInt(baseLength)));
+            sb.append(baseStr.charAt(NumberRandom.randomInt(baseLength)));
         }
         return sb.toString();
     }
