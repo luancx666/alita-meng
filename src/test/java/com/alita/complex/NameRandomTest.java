@@ -1,6 +1,7 @@
 package com.alita.complex;
 
 import com.alita.Random;
+import org.junit.Assert;
 import org.junit.Test;
 
 /**
@@ -14,36 +15,36 @@ public class NameRandomTest {
     @Test
     public void testRandomFirst() {
         String s = Random.rFirst();
-        System.out.println(s);
+        Assert.assertNotNull(s);
     }
 
     @Test
     public void testRandomLast() {
         String s = Random.rLast();
-        System.out.println(s);
+        Assert.assertNotNull(s);
     }
 
     @Test
     public void testRandomName() {
         String s = Random.rName();
-        System.out.println(s);
+        Assert.assertNotNull(s);
     }
 
     @Test
     public void testRandomCFirst() {
         String s = Random.rCFirst();
-        System.out.println(s);
+        Assert.assertNotNull(s);
     }
 
     @Test
     public void testRandomCLast() {
         String s = Random.rCLast();
-        System.out.println(s);
+        Assert.assertNotNull(s);
     }
 
     @Test
     public void testRandomCName() {
         String s = Random.rCName();
-        System.out.println(s);
+        Assert.assertNotNull(s);
     }
 }
