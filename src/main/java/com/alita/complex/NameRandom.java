@@ -18,8 +18,8 @@ public class NameRandom {
      */
     public static String randomFirst() {
         ThreadLocalRandom random = BaseRandom.getRandom();
-        int i = random.nextInt(BaseRandom.FIRST_NAME.size());
-        return BaseRandom.FIRST_NAME.get(i);
+        int i = random.nextInt(BaseRandom.FIRST_NAME.length);
+        return BaseRandom.FIRST_NAME[i];
     }
 
     /**
@@ -29,8 +29,8 @@ public class NameRandom {
      */
     public static String randomLast() {
         ThreadLocalRandom random = BaseRandom.getRandom();
-        int i = random.nextInt(BaseRandom.LAST_NAME.size());
-        return BaseRandom.LAST_NAME.get(i);
+        int i = random.nextInt(BaseRandom.LAST_NAME.length);
+        return BaseRandom.LAST_NAME[i];
     }
 
     /**

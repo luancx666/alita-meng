@@ -449,6 +449,98 @@ public class Random {
         return TextRandom.randomCParagraph(minLength, maxLength);
     }
 
+    //↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓  WEB  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+
+    /**
+     * url
+     *
+     * @return url
+     */
+    public static String rUrl() {
+        return WebRandom.randomUrl();
+    }
+
+    /**
+     * 协议
+     *
+     * @return 协议
+     */
+    public static String rProtocol() {
+        return WebRandom.randomProtocol();
+    }
+
+    /**
+     * 域名
+     *
+     * @return 域名
+     */
+    public static String rDomain() {
+        return WebRandom.randomDomain();
+    }
+
+    /**
+     * 域名
+     *
+     * @return 域名
+     */
+    public static String rDomain(int minLength, int maxLength) {
+        return WebRandom.randomDomain(minLength, maxLength);
+    }
+
+    /**
+     * 顶级域名
+     *
+     * @return 顶级域名
+     */
+    public static String rTld() {
+        return WebRandom.randomTld();
+    }
+
+    /**
+     * 路径
+     *
+     * @return 路径
+     */
+    public static String rPath() {
+        return WebRandom.randomPath();
+    }
+
+    /**
+     * 路径
+     *
+     * @return 路径
+     */
+    public static String rPath(int minLength, int maxLength) {
+        return WebRandom.randomPath(minLength, maxLength);
+    }
+
+    /**
+     * 随机生成Email
+     *
+     * @return 随机生成Email
+     */
+    public static String rEmail() {
+        return WebRandom.randomEmail();
+    }
+
+    /**
+     * 随机生成Email
+     *
+     * @return 随机生成Email
+     */
+    public static String rEmail(int minLength, int maxLength) {
+        return WebRandom.randomEmail(minLength, maxLength);
+    }
+
+    /**
+     * 随机ip
+     *
+     * @return 随机ip
+     */
+    public static String rIp() {
+        return WebRandom.randomIp();
+    }
+
     //↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓  ID  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 
     /**

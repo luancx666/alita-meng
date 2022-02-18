@@ -1,7 +1,5 @@
 package com.alita.base;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
@@ -14,12 +12,10 @@ public class BaseRandom {
     /**
      * 常见英文姓氏
      */
-    public static final List<String> FIRST_NAME = Arrays.asList("Davis", "Miller", "Garcia", "RodriguezSmith",
-            "Johnson", "Wilson", "Martinez", "Anderson", "Taylor", "Williams", "Martin", "Jackson", "Thompson",
-            "White", "Brown", "Jones", "Thomas", "Clark", "Lewis", "Robinson", "Walker", "Perez", "Hernandez",
-            "Moore", "Lopez", "Lee", "Gonzalez", "Harris", "Hall", "Wright", "King", "Scott", "Young", "Allen",
-            "Nelson", "Hill", "Ramirez", "Carter", "Phillips", "Evans", "Turner", "Torres", "Campbell", "Mitchell",
-            "Roberts", "Sanchez", "Green", "Baker", "Adams");
+    public static final String[] FIRST_NAME = ("Davis,Miller,Garcia,Rodriguez,Smith,Johnson,Wilson,Martinez,Anderson," +
+            "Taylor,Williams,Martin,Jackson,Thompson,White,Brown,Jones,Thomas,Clark,Lewis,Robinson,Walker,Perez," +
+            "Hernandez,Moore,Lopez,Lee,Gonzalez,Harris,Hall,Wright,King,Scott,Young,Allen,Nelson,Hill,Ramirez,Carter," +
+            "Phillips,Evans,Turner,Torres,Campbell,Mitchell,Roberts,Sanchez,Green,Baker,Adams").split(",");
 
 
     /**
@@ -68,11 +64,10 @@ public class BaseRandom {
     /**
      * 常见英文名
      */
-    public static final List<String> LAST_NAME = Arrays.asList("Mary", "Patricia", "Linda", "Barbara",
-            "Elizabeth", "Jennifer", "Maria", "Susan", "Margaret", "Dorothy", "Lisa", "Nancy", "Karen",
-            "Betty", "Helen", "Sandra", "Donna", "Carol", "Ruth", "Sharon", "Michelle", "James", "John",
-            "Robert", "Michael", "William", "David", "Richard", "Charles", "Joseph", "Thomas", "Christopher",
-            "Daniel", "Paul", "Mark", "Donald", "George", "Kenneth", "Steven", "Edward", "Brian");
+    public static final String[] LAST_NAME = ("Mary,Patricia,Linda,Barbara,Elizabeth,Jennifer,Maria,Susan,Margaret," +
+            "Dorothy,Lisa,Nancy,Karen,Betty,Helen,Sandra,Donna,Carol,Ruth,Sharon,Michelle,James,John,Robert,Michael," +
+            "William,David,Richard,Charles,Joseph,Thomas,Christopher,Daniel,Paul,Mark,Donald,George,Kenneth,Steven," +
+            "Edward,Brian").split(",");
 
     /**
      * 常见中文姓氏
