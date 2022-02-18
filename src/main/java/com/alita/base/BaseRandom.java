@@ -16,18 +16,6 @@ public class BaseRandom {
             "Taylor,Williams,Martin,Jackson,Thompson,White,Brown,Jones,Thomas,Clark,Lewis,Robinson,Walker,Perez," +
             "Hernandez,Moore,Lopez,Lee,Gonzalez,Harris,Hall,Wright,King,Scott,Young,Allen,Nelson,Hill,Ramirez,Carter," +
             "Phillips,Evans,Turner,Torres,Campbell,Mitchell,Roberts,Sanchez,Green,Baker,Adams").split(",");
-
-
-    /**
-     * 字符串常量：空字符串 {@code ""}
-     */
-    public static final String EMPTY = "";
-    /**
-     * 字符串常量：空格 {@code " "}
-     */
-    public static final String SPACE = " ";
-    public static final String LF = "\n";
-    public static final String CR = "\r";
     /**
      * 用于随机选的数字
      */
