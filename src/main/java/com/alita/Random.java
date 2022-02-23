@@ -625,6 +625,25 @@ public class Random {
     //↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓  ID  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 
     /**
+     * uuid
+     *
+     * @return uuid
+     */
+    public static String rUuid() {
+        return IdRandom.uuid(false);
+    }
+
+    /**
+     * 生成UUID
+     *
+     * @param flag 是否有分割符
+     * @return uuid
+     */
+    public static String rUuid(boolean flag) {
+        return IdRandom.uuid(flag);
+    }
+
+    /**
      * 雪花算法生成的id
      *
      * @return 18位id
