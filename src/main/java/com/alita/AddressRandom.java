@@ -80,7 +80,16 @@ public class AddressRandom {
             MArea city = getCity();
             return city.getName() + " " + city.getChild(true).getName();
         }
-        return COUNTY_LIST.get(NumberRandom.randomInt(COUNTY_LIST.size())).getName();
+        return randomCounty().getName();
+    }
+
+    /**
+     * 随机
+     *
+     * @return 地区
+     */
+    protected static MArea randomCounty() {
+        return COUNTY_LIST.get(NumberRandom.randomInt(COUNTY_LIST.size()));
     }
 
     /**

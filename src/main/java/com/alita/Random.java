@@ -690,4 +690,25 @@ public class Random {
     public static String rColor() {
         return ColorRandom.randomColor();
     }
+
+    //↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓  身份证号码  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+
+    /**
+     * 身份证号
+     *
+     * @return 身份证号
+     */
+    public static String idCard() {
+        return IdCardRandom.randomIdCard();
+    }
+
+    /**
+     * 指定生日的身份证号
+     *
+     * @param birthday 生日 - 19901010
+     * @return 身份证号
+     */
+    public static String idCard(String birthday) {
+        return IdCardRandom.randomIdCard(birthday);
+    }
 }

@@ -29,11 +29,11 @@ public class MArea {
         this.name = name;
     }
 
-    protected String getCode() {
+    public String getCode() {
         return code;
     }
 
-    protected void setCode(String code) {
+    public void setCode(String code) {
         this.code = code;
     }
 
@@ -41,7 +41,7 @@ public class MArea {
         return name;
     }
 
-    protected void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
