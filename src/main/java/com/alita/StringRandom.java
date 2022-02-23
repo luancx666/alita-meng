@@ -36,4 +36,27 @@ public class StringRandom {
         }
         return sb.toString();
     }
+
+    /**
+     * 根传入参数重复随机次数
+     *
+     * @param baseStr   基础字符串
+     * @param minLength 最小次数
+     * @param maxLength 最大次数
+     * @return 数值
+     */
+    public static String randomRepeat(String baseStr, int minLength, int maxLength) {
+        return randomRepeat(baseStr, NumberRandom.randomInt(minLength, maxLength));
+    }
+
+    /**
+     * 重复参数
+     *
+     * @param baseStr 字符串
+     * @param num     重复次数
+     * @return 重复数据
+     */
+    public static String randomRepeat(String baseStr, int num) {
+        return String.valueOf(baseStr).repeat(Math.max(0, num));
+    }
 }

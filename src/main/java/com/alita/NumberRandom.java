@@ -34,6 +34,9 @@ public class NumberRandom {
      * @return 随机数
      */
     protected static int randomInt(int min, int max) {
+        if (min >= max) {
+            return max;
+        }
         return BaseRandom.getRandom().nextInt(min, max);
     }
 

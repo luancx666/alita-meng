@@ -40,6 +40,26 @@ public class Random {
     }
 
     /**
+     * 根据传入参数重复指定次数
+     *
+     * @param baseStr 基础参数
+     * @param num     重复次数
+     * @return 重复数据
+     */
+    public static String rRepeat(String baseStr, int num) {
+        return StringRandom.randomRepeat(baseStr, num);
+    }
+
+    /**
+     * 根据传入数据,随机重复
+     *
+     * @return 随机重复数据
+     */
+    public static String rRepeat(String baseStr, int minLength, int maxLength) {
+        return StringRandom.randomRepeat(baseStr, minLength, maxLength);
+    }
+
+    /**
      * 生成随机数
      *
      * @return 随机数
