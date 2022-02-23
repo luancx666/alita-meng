@@ -630,7 +630,7 @@ public class Random {
      * @return uuid
      */
     public static String rUuid() {
-        return IdRandom.uuid(false);
+        return IdRandom.uuid(true);
     }
 
     /**
@@ -641,6 +641,25 @@ public class Random {
      */
     public static String rUuid(boolean flag) {
         return IdRandom.uuid(flag);
+    }
+
+    /**
+     * 递增 1
+     *
+     * @return 递增数字
+     */
+    public static int increment() {
+        return IdRandom.increment(1);
+    }
+
+    /**
+     * 递增
+     *
+     * @param step 步长
+     * @return 递增数字
+     */
+    public static int increment(int step) {
+        return IdRandom.increment(step);
     }
 
     /**

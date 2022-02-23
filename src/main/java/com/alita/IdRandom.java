@@ -11,6 +11,7 @@ import java.util.UUID;
  * @Version: 1.0.0
  */
 public class IdRandom {
+    private static int NUM = 0;
     /**
      * 雪花算法类
      */
@@ -42,11 +43,21 @@ public class IdRandom {
      */
     protected static String uuid(boolean flag) {
         String uuid = UUID.randomUUID().toString();
-        if (!flag) {
+        if (flag) {
             return uuid;
         }
         return uuid.substring(0, 8) + uuid.substring(9, 13) +
                 uuid.substring(14, 18) + uuid.substring(19, 23) +
                 uuid.substring(24);
+    }
+
+    /**
+     * 递增
+     *
+     * @param step 步长
+     * @return 递增数字
+     */
+    protected static int increment(int step) {
+        return NUM += step;
     }
 }
