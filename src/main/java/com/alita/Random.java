@@ -1,10 +1,5 @@
 package com.alita;
 
-import com.alita.base.BooleanRandom;
-import com.alita.base.NumberRandom;
-import com.alita.base.StringRandom;
-import com.alita.complex.*;
-
 import java.util.Date;
 
 /**
@@ -143,7 +138,7 @@ public class Random {
         return BooleanRandom.randomBoolean();
     }
 
-    //↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓  英文  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+    //↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓  名称  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 
     /**
      * 英文名
@@ -172,6 +167,33 @@ public class Random {
         return NameRandom.randomLast();
     }
 
+    /**
+     * 中文姓名
+     *
+     * @return 中文姓名
+     */
+    public static String rCName() {
+        return NameRandom.randomCName();
+    }
+
+    /**
+     * 中文姓
+     *
+     * @return 中文姓
+     */
+    public static String rCFirst() {
+        return NameRandom.randomCFirst();
+    }
+
+    /**
+     * 中文名
+     *
+     * @return 中文名
+     */
+    public static String rCLast() {
+        return NameRandom.randomCLast();
+    }
+
     //↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓  时间  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 
     /**
@@ -184,7 +206,7 @@ public class Random {
     }
 
     /**
-     * 当前时间
+     * 字符串当前时间
      *
      * @return 当前时间
      */
@@ -193,7 +215,7 @@ public class Random {
     }
 
     /**
-     * 格式化当前时间
+     * 指定格式当前时间
      *
      * @param format 日期格式
      * @return 当前时间
@@ -263,36 +285,6 @@ public class Random {
     public static String rDateString(long start, long end, String format) {
         return DateRandom.randomDateString(start, end, format);
     }
-
-    //↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓  中文  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
-
-    /**
-     * 中文姓名
-     *
-     * @return 中文姓名
-     */
-    public static String rCName() {
-        return NameRandom.randomCName();
-    }
-
-    /**
-     * 中文姓
-     *
-     * @return 中文姓
-     */
-    public static String rCFirst() {
-        return NameRandom.randomCFirst();
-    }
-
-    /**
-     * 中文名
-     *
-     * @return 中文名
-     */
-    public static String rCLast() {
-        return NameRandom.randomCLast();
-    }
-
 
     //↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓  TEXT  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 
@@ -539,6 +531,75 @@ public class Random {
      */
     public static String rIp() {
         return WebRandom.randomIp();
+    }
+
+
+    //↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓  地址  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+
+    /**
+     * 省
+     *
+     * @return 省
+     */
+    public static String rProvince() {
+        return AddressRandom.randomProvince();
+    }
+
+    /**
+     * 市
+     *
+     * @return 市
+     */
+    public static String rCity() {
+        return AddressRandom.randomCity(false);
+    }
+
+    /**
+     * 市
+     *
+     * @param flag 是否添加前缀
+     * @return 市
+     */
+    public static String rCity(boolean flag) {
+        return AddressRandom.randomCity(flag);
+    }
+
+    /**
+     * 区
+     *
+     * @return 区
+     */
+    public static String rCounty() {
+        return AddressRandom.randomCounty(false);
+    }
+
+    /**
+     * 区
+     *
+     * @param flag 是否添加前缀
+     * @return 区
+     */
+    public static String rCounty(boolean flag) {
+        return AddressRandom.randomCounty(flag);
+    }
+
+    /**
+     * 随机地址
+     *
+     * @return 地址
+     */
+    public static String rArea() {
+        return AddressRandom.randomArea();
+    }
+
+    /**
+     * 指定code 下地区
+     *
+     * @param code code
+     * @return 地区
+     */
+    public static String assignArea(String code) {
+        return AddressRandom.assignArea(code);
     }
 
     //↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓  ID  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓

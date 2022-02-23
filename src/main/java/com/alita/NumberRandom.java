@@ -1,4 +1,4 @@
-package com.alita.base;
+package com.alita;
 
 /**
  * @Description: 随机数字
@@ -12,7 +12,7 @@ public class NumberRandom {
      *
      * @return 随机数
      */
-    public static int randomInt() {
+    protected static int randomInt() {
         return BaseRandom.getRandom().nextInt();
     }
 
@@ -22,7 +22,7 @@ public class NumberRandom {
      * @param limit 限制随机数的范围，不包括这个数
      * @return 随机数
      */
-    public static int randomInt(int limit) {
+    protected static int randomInt(int limit) {
         return BaseRandom.getRandom().nextInt(limit);
     }
 
@@ -33,7 +33,7 @@ public class NumberRandom {
      * @param max 最大数（不包含）
      * @return 随机数
      */
-    public static int randomInt(int min, int max) {
+    protected static int randomInt(int min, int max) {
         return BaseRandom.getRandom().nextInt(min, max);
     }
 
@@ -42,7 +42,7 @@ public class NumberRandom {
      *
      * @return 随机数
      */
-    public static long randomLong() {
+    protected static long randomLong() {
         return BaseRandom.getRandom().nextLong();
     }
 
@@ -52,7 +52,7 @@ public class NumberRandom {
      * @param limit 限制随机数的范围，不包括这个数
      * @return 随机数
      */
-    public static long randomLong(long limit) {
+    protected static long randomLong(long limit) {
         return BaseRandom.getRandom().nextLong(limit);
     }
 
@@ -63,7 +63,7 @@ public class NumberRandom {
      * @param max 最大数（不包含）
      * @return 随机数
      */
-    public static long randomLong(long min, long max) {
+    protected static long randomLong(long min, long max) {
         return BaseRandom.getRandom().nextLong(min, max);
     }
 
@@ -72,7 +72,7 @@ public class NumberRandom {
      *
      * @return 随机数
      */
-    public static double randomDouble() {
+    protected static double randomDouble() {
         return BaseRandom.getRandom().nextDouble();
     }
 
@@ -82,7 +82,7 @@ public class NumberRandom {
      * @param limit 限制随机数的范围，不包括这个数
      * @return 随机数
      */
-    public static double randomDouble(double limit) {
+    protected static double randomDouble(double limit) {
         return BaseRandom.getRandom().nextDouble(limit);
     }
 
@@ -93,7 +93,7 @@ public class NumberRandom {
      * @param max 最大数（不包含）
      * @return 随机数
      */
-    public static double randomDouble(double min, double max) {
+    protected static double randomDouble(double min, double max) {
         return BaseRandom.getRandom().nextDouble(min, max);
     }
 }

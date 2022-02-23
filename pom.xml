@@ -6,12 +6,19 @@
 
     <groupId>com.gitee.luancx</groupId>
     <artifactId>alita-meng</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <name>alita-meng</name>
     <packaging>jar</packaging>
     <description>java后端数据模拟工具</description>
 
     <url>https://gitee.com/luancx/alita-meng</url>
+
+
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>9</version>
+    </parent>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -50,13 +57,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <parent>
-        <groupId>org.sonatype.oss</groupId>
-        <artifactId>oss-parent</artifactId>
-        <version>9</version>
-    </parent>
-
 
     <distributionManagement>
         <snapshotRepository>

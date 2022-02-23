@@ -1,6 +1,4 @@
-package com.alita.complex;
-
-import com.alita.base.NumberRandom;
+package com.alita;
 
 /**
  * @Description: 颜色
@@ -19,7 +17,7 @@ public class ColorRandom {
      *
      * @return 16进制颜色值
      */
-    public static String randomColor() {
+    protected static String randomColor() {
         //红色
         String red = singleColor(NumberRandom.randomInt(RGB_COLOR_BOUND));
         //绿色

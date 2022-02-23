@@ -6,7 +6,7 @@ package com.alita.utils;
  * @Date: 2022/02/17
  * @Version: 1.0.0
  */
-public class StringUtils {
+public class MUtils {
     public static boolean isEmpty(CharSequence cs) {
         return cs == null || cs.length() == 0;
     }

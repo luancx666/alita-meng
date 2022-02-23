@@ -1,7 +1,6 @@
-package com.alita.complex;
+package com.alita;
 
-import com.alita.base.NumberRandom;
-import com.alita.utils.StringUtils;
+import com.alita.utils.MUtils;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -32,7 +31,7 @@ public class DateRandom {
      *
      * @return 当前时间
      */
-    public static Date now() {
+    protected static Date now() {
         return new Date();
     }
 
@@ -41,7 +40,7 @@ public class DateRandom {
      *
      * @return 获取随机时间
      */
-    public static Date randomDate() {
+    protected static Date randomDate() {
         return randomDate(TIME_CUT, System.currentTimeMillis());
     }
 
@@ -52,7 +51,7 @@ public class DateRandom {
      * @param endTime   结束时间
      * @return 指定时间范围内的随机时间
      */
-    public static Date randomDate(long startTime, long endTime) {
+    protected static Date randomDate(long startTime, long endTime) {
         if (startTime >= endTime) {
             return null;
         }
@@ -64,7 +63,7 @@ public class DateRandom {
      *
      * @return 字符串当前时间
      */
-    public static String nowString() {
+    protected static String nowString() {
         return nowString(null);
     }
 
@@ -74,7 +73,7 @@ public class DateRandom {
      * @param format 日期格式
      * @return 格式化后当前日期
      */
-    public static String nowString(String format) {
+    protected static String nowString(String format) {
         return formatDate(now(), format);
     }
 
@@ -83,7 +82,7 @@ public class DateRandom {
      *
      * @return 获取随机时间
      */
-    public static String randomDateString() {
+    protected static String randomDateString() {
         return formatDate(randomDate(), null);
     }
 
@@ -92,7 +91,7 @@ public class DateRandom {
      *
      * @return 格式化后随机时间
      */
-    public static String randomDateString(String format) {
+    protected static String randomDateString(String format) {
         return formatDate(randomDate(), format);
     }
 
@@ -103,7 +102,7 @@ public class DateRandom {
      * @param endTime   结束时间
      * @return 指定时间范围内的随机时间
      */
-    public static String randomDateString(long startTime, long endTime) {
+    protected static String randomDateString(long startTime, long endTime) {
         return randomDateString(startTime, endTime, null);
     }
 
@@ -115,7 +114,7 @@ public class DateRandom {
      * @param format    日期格式
      * @return 格式化随机时间
      */
-    public static String randomDateString(long startTime, long endTime, String format) {
+    protected static String randomDateString(long startTime, long endTime, String format) {
         return formatDate(randomDate(startTime, endTime), format);
     }
 
@@ -137,7 +136,7 @@ public class DateRandom {
      * @return 日期格式类
      */
     private static SimpleDateFormat getDateFormat(String format) {
-        if (StringUtils.isEmpty(format)) {
+        if (MUtils.isEmpty(format)) {
             format = TIME_FORMAT;
         }
         if (DATEFORMAT_MAP.containsKey(format)) {

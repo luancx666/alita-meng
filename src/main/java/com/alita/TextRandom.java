@@ -1,8 +1,4 @@
-package com.alita.complex;
-
-import com.alita.base.BaseRandom;
-import com.alita.base.NumberRandom;
-import com.alita.base.StringRandom;
+package com.alita;
 
 /**
  * @Description: 文本
@@ -17,7 +13,7 @@ public class TextRandom {
      *
      * @return 随机单词
      */
-    public static String randomWord() {
+    protected static String randomWord() {
         return randomWord(3, 7);
     }
 
@@ -26,7 +22,7 @@ public class TextRandom {
      *
      * @return 随机单词
      */
-    public static String randomWord(int minLength, int maxLength) {
+    protected static String randomWord(int minLength, int maxLength) {
         return StringRandom.str(BaseRandom.BASE_CHAR_LOWER, NumberRandom.randomInt(minLength, maxLength));
     }
 
@@ -35,7 +31,7 @@ public class TextRandom {
      *
      * @return 随机标题
      */
-    public static String randomTitle() {
+    protected static String randomTitle() {
         return randomTitle(3, 5);
     }
 
@@ -46,7 +42,7 @@ public class TextRandom {
      * @param maxLength 最大长度
      * @return 随机标题
      */
-    public static String randomTitle(int minLength, int maxLength) {
+    protected static String randomTitle(int minLength, int maxLength) {
         int anInt = NumberRandom.randomInt(minLength, maxLength);
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < anInt; i++) {
@@ -63,7 +59,7 @@ public class TextRandom {
      *
      * @return 随机短句
      */
-    public static String randomSentence() {
+    protected static String randomSentence() {
         return randomSentence(3, 5);
     }
 
@@ -72,7 +68,7 @@ public class TextRandom {
      *
      * @return 随机短句
      */
-    public static String randomSentence(int minLength, int maxLength) {
+    protected static String randomSentence(int minLength, int maxLength) {
         int anInt = NumberRandom.randomInt(minLength, maxLength);
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < anInt; i++) {
@@ -90,7 +86,7 @@ public class TextRandom {
      *
      * @return 随机段落
      */
-    public static String randomParagraph() {
+    protected static String randomParagraph() {
         return randomParagraph(2, 5);
     }
 
@@ -99,7 +95,7 @@ public class TextRandom {
      *
      * @return 随机段落
      */
-    public static String randomParagraph(int minLength, int maxLength) {
+    protected static String randomParagraph(int minLength, int maxLength) {
         int anInt = NumberRandom.randomInt(minLength, maxLength);
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < anInt; i++) {
@@ -116,7 +112,7 @@ public class TextRandom {
      *
      * @return 中文
      */
-    public static String randomCWord() {
+    protected static String randomCWord() {
         return randomCWord(2, 5);
     }
 
@@ -125,7 +121,7 @@ public class TextRandom {
      *
      * @return 中文
      */
-    public static String randomCWord(int minLength, int maxLength) {
+    protected static String randomCWord(int minLength, int maxLength) {
         return randomCWord(BaseRandom.CHINESE_CHARACTER, minLength, maxLength);
     }
 
@@ -134,7 +130,7 @@ public class TextRandom {
      *
      * @return 中文
      */
-    public static String randomCWord(String baseStr, int minLength, int maxLength) {
+    protected static String randomCWord(String baseStr, int minLength, int maxLength) {
         return StringRandom.str(baseStr, NumberRandom.randomInt(minLength, maxLength));
     }
 
@@ -143,7 +139,7 @@ public class TextRandom {
      *
      * @return 随机标题
      */
-    public static String randomCTitle() {
+    protected static String randomCTitle() {
         return randomCTitle(3, 5);
     }
 
@@ -154,7 +150,7 @@ public class TextRandom {
      * @param maxLength 最大长度
      * @return 随机标题
      */
-    public static String randomCTitle(int minLength, int maxLength) {
+    protected static String randomCTitle(int minLength, int maxLength) {
         int anInt = NumberRandom.randomInt(minLength, maxLength);
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < anInt; i++) {
@@ -171,7 +167,7 @@ public class TextRandom {
      *
      * @return 随机短句
      */
-    public static String randomCSentence() {
+    protected static String randomCSentence() {
         return randomCSentence(3, 5);
     }
 
@@ -180,7 +176,7 @@ public class TextRandom {
      *
      * @return 随机短句
      */
-    public static String randomCSentence(int minLength, int maxLength) {
+    protected static String randomCSentence(int minLength, int maxLength) {
         int anInt = NumberRandom.randomInt(minLength, maxLength);
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < anInt; i++) {
@@ -198,7 +194,7 @@ public class TextRandom {
      *
      * @return 随机段落
      */
-    public static String randomCParagraph() {
+    protected static String randomCParagraph() {
         return randomCParagraph(2, 5);
     }
 
@@ -207,7 +203,7 @@ public class TextRandom {
      *
      * @return 随机段落
      */
-    public static String randomCParagraph(int minLength, int maxLength) {
+    protected static String randomCParagraph(int minLength, int maxLength) {
         int anInt = NumberRandom.randomInt(minLength, maxLength);
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < anInt; i++) {

@@ -1,4 +1,4 @@
-package com.alita.base;
+package com.alita;
 
 /**
  * @Description: 随机布尔值
@@ -12,7 +12,7 @@ public class BooleanRandom {
      *
      * @return 随机布尔值
      */
-    public static boolean randomBoolean() {
+    protected static boolean randomBoolean() {
         return BaseRandom.getRandom().nextBoolean();
     }
 }

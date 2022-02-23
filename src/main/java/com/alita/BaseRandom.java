@@ -1,4 +1,4 @@
-package com.alita.base;
+package com.alita;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -9,73 +9,54 @@ import java.util.concurrent.ThreadLocalRandom;
  * @Version: 1.0.0
  */
 public class BaseRandom {
+
     /**
      * 常见英文姓氏
      */
-    public static final String[] FIRST_NAME = ("Davis,Miller,Garcia,Rodriguez,Smith,Johnson,Wilson,Martinez,Anderson," +
+    protected static final String[] FIRST_NAME = ("Davis,Miller,Garcia,Rodriguez,Smith,Johnson,Wilson,Martinez,Anderson," +
             "Taylor,Williams,Martin,Jackson,Thompson,White,Brown,Jones,Thomas,Clark,Lewis,Robinson,Walker,Perez," +
             "Hernandez,Moore,Lopez,Lee,Gonzalez,Harris,Hall,Wright,King,Scott,Young,Allen,Nelson,Hill,Ramirez,Carter," +
             "Phillips,Evans,Turner,Torres,Campbell,Mitchell,Roberts,Sanchez,Green,Baker,Adams").split(",");
     /**
      * 用于随机选的数字
      */
-    public static final String BASE_NUMBER = "0123456789";
+    protected static final String BASE_NUMBER = "0123456789";
     /**
      * 用于随机选的字符_小写
      */
-    public static final String BASE_CHAR_LOWER = "abcdefghijklmnopqrstuvwxyz";
+    protected static final String BASE_CHAR_LOWER = "abcdefghijklmnopqrstuvwxyz";
     /**
      * 用于随机选的字符_大写
      */
-    public static final String BASE_CHAR_UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    protected static final String BASE_CHAR_UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     /**
      * 用于随机选的字符和数字
      */
-    public static final String BASE_CHAR_NUMBER = BASE_CHAR_LOWER + BASE_CHAR_UPPER + BASE_NUMBER;
-
-    /**
-     * 获取随机数生成器对象<br>
-     * ThreadLocalRandom是JDK 7之后提供并发产生随机数，能够解决多个线程发生的竞争争夺。
-     *
-     * <p>
-     * 注意：此方法返回的{@link ThreadLocalRandom}不可以在多线程环境下共享对象，否则有重复随机数问题。
-     * 见：https://www.jianshu.com/p/89dfe990295c
-     * </p>
-     *
-     * @return {@link ThreadLocalRandom}
-     * @since 3.1.2
-     */
-    public static ThreadLocalRandom getRandom() {
-        return ThreadLocalRandom.current();
-    }
-
+    protected static final String BASE_CHAR_NUMBER = BASE_CHAR_LOWER + BASE_CHAR_UPPER + BASE_NUMBER;
     /**
      * 常见英文名
      */
-    public static final String[] LAST_NAME = ("Mary,Patricia,Linda,Barbara,Elizabeth,Jennifer,Maria,Susan,Margaret," +
+    protected static final String[] LAST_NAME = ("Mary,Patricia,Linda,Barbara,Elizabeth,Jennifer,Maria,Susan,Margaret," +
             "Dorothy,Lisa,Nancy,Karen,Betty,Helen,Sandra,Donna,Carol,Ruth,Sharon,Michelle,James,John,Robert,Michael," +
             "William,David,Richard,Charles,Joseph,Thomas,Christopher,Daniel,Paul,Mark,Donald,George,Kenneth,Steven," +
             "Edward,Brian").split(",");
-
     /**
      * 常见中文姓氏
      */
-    public static final String C_SURNAME = "李王张刘陈杨黄赵周吴徐孙朱马胡郭林何高梁郑罗宋谢唐韩曹许邓萧史石叶";
-
+    protected static final String C_SURNAME = "李王张刘陈杨黄赵周吴徐孙朱马胡郭林何高梁郑罗宋谢唐韩曹许邓萧史石叶";
     /**
      * 常用名字
      */
-    public static final String C_NAME = "怀耀堂清帅帆嘉吉昊栋萌昌同萍明成向少民树阔世刚业琛娜东娟星春娥倩利谭启爱水永常琼丽" +
+    protected static final String C_NAME = "怀耀堂清帅帆嘉吉昊栋萌昌同萍明成向少民树阔世刚业琛娜东娟星春娥倩利谭启爱水永常琼丽" +
             "举桂居扈义汉行衍才虎鹏乐桑晓汝瑞健书鑫景良山艳平遵婷智顺白百广鹿鲁梅庆炎源云皓沙抚炜颜芝骞增钟功加红钢邢窦岩芬京亮纲" +
             "芳炳岳仁勇泉磊立勋风经苏苑滔滕法苗付盛胜郝飞惠章波拥若雪绪士铭峰英仲曲维银延建国能泽开洁茂范有锋洋夏崔焕霞伟生传锡蔡" +
             "圣贤洪太夫振田锰由强礼允兆商升效光蕊华奎魏敏齐子村青杜煜潜赟孟荣正季坤来祥学武车慧全浩彩卫敬公彬杰兰佳兴兵轶海好腾蕾" +
             "松长卿宁征善薄超文辉玉安冉斌美福宏宗龙香厚涛军薛辛宝群润涧宫玮妮冯侯新冰辰玲莲冲涵段家德冷边莹方殿秀淄毅寇俊秋富双巍" +
             "金发淑近燕志姚姜远连迟忠翠信姣凤巨巩召旭路可凯柱菲";
-
     /**
      * 常用中文
      */
-    public static final String CHINESE_CHARACTER = C_SURNAME + C_NAME + "退老态送适考逃者逆选而耍倍怎透耐逐怒倒递途怕" +
+    protected static final String CHINESE_CHARACTER = C_SURNAME + C_NAME + "退老态送适考逃者逆选而耍倍怎透耐逐怒倒递途怕" +
             "耕怖耗逗倘候倚通怜思逝速借怠造倡逢急倦性怨怪逮耳债总耻值逼耽倾假遇恋聋职灌遍偏恐恒道联遗做聚停恢遣遥恨恩聪火灭恭遭" +
             "遮灯息灰恰恳灵灶恶偶偷恼灾灿偿避邀肃悄傅肆肉炉悉炊肌傍炒悔炕肚肝悟肠悠股肢那患肤肥悦您储肩邪悬催炭邮炮肯育悲傲炸点" +
             "肺邻傻炼悼肾肿胀胁烂胃情胆烈郊惊背郎像惑惕胖烘僚烛惜胞烟烤烦烧惧部惨惩烫热惭惯惰胳想僵胶胸惹僻都愁脂脆愈脉愉脊脏意" +
@@ -115,4 +96,22 @@ public class BaseRandom {
             "漏伐休弓缓鼓演引编众优缘伙会缝伞弟鼠漠缠伤弦缩伪漫伯弯估弱伴缴伶伸缸弹缺鼻似但位低住罐网归当体录余罚佛作你形罢佣轧" +
             "轨佩罩罪转轮置潮软轰影役彻轻彼载齿使轿往较侄径龄待辅辆很辈羊例律侍徒输得供辜依羞辞龟辟御羡澡辣侦侧侨辨辩循辫侮微辱" +
             "侵辽羽达便激迁翁心促必迅翅忆过迈忌忍迎运返俗还忘俘忙这进违保忧俩快迫俭修俯述俱念迷迹翻翼忽追";
+
+    /**
+     * 获取随机数生成器对象<br>
+     * ThreadLocalRandom是JDK 7之后提供并发产生随机数，能够解决多个线程发生的竞争争夺。
+     *
+     * <p>
+     * 注意：此方法返回的{@link ThreadLocalRandom}不可以在多线程环境下共享对象，否则有重复随机数问题。
+     * 见：https://www.jianshu.com/p/89dfe990295c
+     * </p>
+     *
+     * @return {@link ThreadLocalRandom}
+     * @since 3.1.2
+     */
+    protected static ThreadLocalRandom getRandom() {
+        return ThreadLocalRandom.current();
+    }
+
+
 }

@@ -1,7 +1,4 @@
-package com.alita.complex;
-
-import com.alita.base.NumberRandom;
-import com.alita.base.StringRandom;
+package com.alita;
 
 /**
  * @Description: 网站
@@ -13,7 +10,7 @@ public class WebRandom {
     /**
      * 邮箱域名
      */
-    public static final String[] EMAIL_SUFFIX = ("@gmail.com,@yahoo.com,@msn.com,@hotmail.com,@aol.com,@ask.com," +
+    protected static final String[] EMAIL_SUFFIX = ("@gmail.com,@yahoo.com,@msn.com,@hotmail.com,@aol.com,@ask.com," +
             "@live.com,@qq.com,@0355.net,@163.com,@163.net,@263.net,@3721.net,@yeah.net,@googlemail.com,@126.com," +
             "@sina.com,@sohu.com,@yahoo.com.cn").split(",");
     /**
@@ -45,7 +42,7 @@ public class WebRandom {
      *
      * @return 协议
      */
-    public static String randomProtocol() {
+    protected static String randomProtocol() {
         return PROTOCOL_LIST[NumberRandom.randomInt(PROTOCOL_LIST.length)];
     }
 
@@ -54,7 +51,7 @@ public class WebRandom {
      *
      * @return 域名
      */
-    public static String randomDomain() {
+    protected static String randomDomain() {
         return randomDomain(5, 12);
     }
 
@@ -63,7 +60,7 @@ public class WebRandom {
      *
      * @return 域名
      */
-    public static String randomDomain(int minLength, int maxLength) {
+    protected static String randomDomain(int minLength, int maxLength) {
         return StringRandom.str(minLength, maxLength);
     }
 
@@ -72,7 +69,7 @@ public class WebRandom {
      *
      * @return 顶级域名
      */
-    public static String randomTld() {
+    protected static String randomTld() {
         return TLD_LIST[NumberRandom.randomInt(TLD_LIST.length)];
     }
 
@@ -81,7 +78,7 @@ public class WebRandom {
      *
      * @return 路径
      */
-    public static String randomPath() {
+    protected static String randomPath() {
         return randomPath(1, 4);
     }
 
@@ -90,7 +87,7 @@ public class WebRandom {
      *
      * @return 路径
      */
-    public static String randomPath(int minLength, int maxLength) {
+    protected static String randomPath(int minLength, int maxLength) {
         int num = NumberRandom.randomInt(minLength, maxLength);
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < num; i++) {
@@ -104,7 +101,7 @@ public class WebRandom {
      *
      * @return url
      */
-    public static String randomUrl() {
+    protected static String randomUrl() {
         return randomProtocol() + "://www." + randomDomain() + randomTld() + randomPath();
     }
 
@@ -113,7 +110,7 @@ public class WebRandom {
      *
      * @return 随机生成Email
      */
-    public static String randomEmail() {
+    protected static String randomEmail() {
         return randomEmail(5, 12);
     }
 
@@ -122,7 +119,7 @@ public class WebRandom {
      *
      * @return 随机生成Email
      */
-    public static String randomEmail(int minLength, int maxLength) {
+    protected static String randomEmail(int minLength, int maxLength) {
         return StringRandom.str(minLength, maxLength) + EMAIL_SUFFIX[NumberRandom.randomInt(EMAIL_SUFFIX.length)];
     }
 
@@ -131,7 +128,7 @@ public class WebRandom {
      *
      * @return 随机ip
      */
-    public static String randomIp() {
+    protected static String randomIp() {
         int i = NumberRandom.randomInt(IP_RANGE.length);
         int ip = NumberRandom.randomInt(IP_RANGE[i][0], IP_RANGE[i][1]);
         return ((ip >> 24) & 0xff) + "." + ((ip >> 16) & 0xff) + "." + ((ip >> 8) & 0xff) + "." + (ip & 0xff);

@@ -1,6 +1,4 @@
-package com.alita.complex;
-
-import com.alita.base.BaseRandom;
+package com.alita;
 
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -16,7 +14,7 @@ public class NameRandom {
      *
      * @return 英文姓氏
      */
-    public static String randomFirst() {
+    protected static String randomFirst() {
         ThreadLocalRandom random = BaseRandom.getRandom();
         int i = random.nextInt(BaseRandom.FIRST_NAME.length);
         return BaseRandom.FIRST_NAME[i];
@@ -27,7 +25,7 @@ public class NameRandom {
      *
      * @return 英文名
      */
-    public static String randomLast() {
+    protected static String randomLast() {
         ThreadLocalRandom random = BaseRandom.getRandom();
         int i = random.nextInt(BaseRandom.LAST_NAME.length);
         return BaseRandom.LAST_NAME[i];
@@ -38,7 +36,7 @@ public class NameRandom {
      *
      * @return 英文姓名
      */
-    public static String randomName() {
+    protected static String randomName() {
         return randomFirst() + " " + randomLast();
     }
 
@@ -47,7 +45,7 @@ public class NameRandom {
      *
      * @return 中文姓
      */
-    public static String randomCFirst() {
+    protected static String randomCFirst() {
         ThreadLocalRandom random = BaseRandom.getRandom();
         int i = random.nextInt(BaseRandom.C_SURNAME.length());
         return BaseRandom.C_SURNAME.charAt(i) + "";
@@ -59,7 +57,7 @@ public class NameRandom {
      *
      * @return 中文名
      */
-    public static String randomCLast() {
+    protected static String randomCLast() {
         ThreadLocalRandom random = BaseRandom.getRandom();
         int i = random.nextInt(BaseRandom.C_NAME.length());
         char c = BaseRandom.C_NAME.charAt(i);
@@ -75,7 +73,7 @@ public class NameRandom {
      *
      * @return 中文姓名
      */
-    public static String randomCName() {
+    protected static String randomCName() {
         return randomCFirst() + randomCLast();
     }
 }

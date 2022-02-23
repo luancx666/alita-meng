@@ -1,4 +1,4 @@
-package com.alita.base;
+package com.alita;
 
 /**
  * @Description: 随机字符串
@@ -8,11 +8,11 @@ package com.alita.base;
  */
 public class StringRandom {
 
-    public static String str(int length) {
+    protected static String str(int length) {
         return str(BaseRandom.BASE_CHAR_NUMBER, length);
     }
 
-    public static String str(int minLength, int maxLength) {
+    protected static String str(int minLength, int maxLength) {
         int anInt = BaseRandom.getRandom().nextInt(minLength, maxLength);
         return str(BaseRandom.BASE_CHAR_NUMBER, anInt);
     }
@@ -24,7 +24,7 @@ public class StringRandom {
      * @param length  指定长度
      * @return 随机字符串
      */
-    public static String str(String baseStr, int length) {
+    protected static String str(String baseStr, int length) {
         if (length < 1) {
             length = 1;
         }
