@@ -1,5 +1,6 @@
 package com.alita;
 
+import com.alita.ramdom.Random;
 import junit.framework.TestCase;
 import org.junit.Assert;
 

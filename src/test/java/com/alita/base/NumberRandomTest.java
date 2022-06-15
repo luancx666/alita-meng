@@ -1,6 +1,6 @@
 package com.alita.base;
 
-import com.alita.Random;
+import com.alita.ramdom.Random;
 import org.junit.Test;
 
 /**

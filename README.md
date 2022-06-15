@@ -11,11 +11,19 @@ maven项目
 #### 安装教程
 
 ```
-        <dependency>
-            <groupId>com.gitee.luancx</groupId>
-            <artifactId>alita-meng</artifactId>
-            <version>1.1.0</version>
-        </dependency>
+<dependency>
+    <groupId>com.gitee.luancx</groupId>
+    <artifactId>alita-meng</artifactId>
+    <version>${version}</version>
+    <scope>test</scope>
+</dependency>
+```
+
+直接使用 Random 静态方法调用 如:
+
+```
+String str=Ramdom.rString();
+int num=Random.rInt();
 ```
 
 #### 使用说明
@@ -103,7 +111,14 @@ Random.class
 |          | rSnowflakeIdString()                                  | 字符串18位id                     | 字符串                               |
 |          |                                                       |                                  |                                      |
 | 颜色     | rColor()                                              | 16进制颜色值                     | #79E0F2                              |
+|          | rRGB()                                                | RGB 颜色                         | rgb(210,134,111)                     |
 |          |                                                       |                                  |                                      |
 | 身份证号 | idCard()                                              | 18位身份号                       |                                      |
 |          | idCard(String birthday)                               | 指定生日的身份证号               | 19901010                             |
+|          |                                                       |                                  |                                      |
+| 集合     | rArrayOne(Collection<? extends T> list)               | 随机选择一个元素                 |                                      |
+|          | rArrayNext(Collection<? extends T> list)              | 获取下一个元素                   |                                      |
+|          | rArrayNext(Collection<? extends T> list, int step)    | 根据步长获取下一个元素           |                                      |
+|          | rArrayCopy(List<T> list, int count)                   | 将集合复制指定次数               |                                      |
+|          | rArrayCopy(List<T> list, int min, int max)            | 将集合复制范围内随机次数         |                                      |
 

@@ -1,6 +1,6 @@
 package com.alita.pojo;
 
-import com.alita.Random;
+import com.alita.ramdom.Random;
 
 import java.util.List;
 

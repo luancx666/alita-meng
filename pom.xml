@@ -6,13 +6,12 @@
 
     <groupId>com.gitee.luancx</groupId>
     <artifactId>alita-meng</artifactId>
-    <version>1.2.0</version>
+    <version>1.4.0</version>
     <name>alita-meng</name>
     <packaging>jar</packaging>
     <description>java后端数据模拟工具</description>
 
     <url>https://gitee.com/luancx/alita-meng</url>
-
 
     <parent>
         <groupId>org.sonatype.oss</groupId>
@@ -23,8 +22,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <projectUrl>https://gitee.com/luancx/alita-meng.git</projectUrl>
         <serverId>alita-meng</serverId>
         <skipTests>true</skipTests>
