@@ -6,10 +6,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * @Description: 地址
@@ -143,7 +140,7 @@ public class AddressRandom {
         BufferedReader reader = null;
         String temp;
         try {
-            reader = new BufferedReader(new InputStreamReader(resource.openStream(), StandardCharsets.UTF_8));
+            reader = new BufferedReader(new InputStreamReader(Objects.requireNonNull(resource).openStream(), StandardCharsets.UTF_8));
             while ((temp = reader.readLine()) != null) {
                 buildData(temp);
             }
