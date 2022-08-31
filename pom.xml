@@ -6,7 +6,7 @@
 
     <groupId>com.gitee.luancx</groupId>
     <artifactId>alita-meng</artifactId>
-    <version>1.4.0</version>
+    <version>1.4.1</version>
     <name>alita-meng</name>
     <packaging>jar</packaging>
     <description>java后端数据模拟工具</description>

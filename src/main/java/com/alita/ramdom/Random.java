@@ -624,6 +624,26 @@ public class Random {
         return AddressRandom.assignArea(code);
     }
 
+    //↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓  手机号  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+
+    /**
+     * 随机手机号
+     *
+     * @return 手机号
+     */
+    public static String rPhone() {
+        return PhoneRandom.randomPhone();
+    }
+
+    /**
+     * 随机手机号
+     *
+     * @return 手机号
+     */
+    public static String rPhone(String first) {
+        return PhoneRandom.randomPhone(first);
+    }
+
     //↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓  ID  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 
     /**

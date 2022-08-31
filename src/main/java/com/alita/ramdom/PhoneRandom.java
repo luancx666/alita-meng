@@ -19,6 +19,28 @@ public class PhoneRandom {
      */
     protected static String randomPhone() {
         String first = TEL_FIRST[NumberRandom.randomInt(TEL_FIRST.length)];
-        return first + (String.valueOf(NumberRandom.randomInt(100000000, 200000000)).substring(1));
+        return randomPhone(first);
+    }
+
+    /**
+     * 指定前缀的手机号
+     *
+     * @param first 前缀
+     * @return 手机号
+     */
+    protected static String randomPhone(String first) {
+        if (null == first || "".equals(first)) {
+            first = TEL_FIRST[NumberRandom.randomInt(TEL_FIRST.length)];
+        } else if (first.length() >= 13) {
+            return first.substring(0, 13);
+        }
+        int length = 13 - first.length();
+        StringBuilder z = new StringBuilder();
+        for (int i = 0; i < length; i++) {
+            z.append("0");
+        }
+
+        return first + (String.valueOf(NumberRandom.randomLong(Long.parseLong("1" + z), Long.parseLong("2" + z)))
+                .substring(1));
     }
 }

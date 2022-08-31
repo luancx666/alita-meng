@@ -3,8 +3,9 @@ package com.alita.ramdom;
 import com.alita.pojo.MArea;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -100,7 +101,11 @@ public class AddressRandom {
     protected static String randomArea() {
         MArea province = getProvince();
         MArea city = province.getChild(true);
-        return province.getName() + " " + city.getName() + " " + city.getChild(true).getName();
+        MArea child = city.getChild(true);
+        if (null == child) {
+            return province.getName() + " " + city.getName();
+        }
+        return province.getName() + " " + city.getName() + " " + child.getName();
     }
 
     /**
@@ -132,11 +137,13 @@ public class AddressRandom {
      * 从文件中读取数据
      */
     private static void generateAddress() {
-        File file = new File("src/main/resources/data/area_data.txt");
+        ClassLoader classLoader = AddressRandom.class.getClassLoader();
+        URL resource = classLoader.getResource("data/area_data.txt");
+
         BufferedReader reader = null;
         String temp;
         try {
-            reader = new BufferedReader(new FileReader(file));
+            reader = new BufferedReader(new InputStreamReader(resource.openStream(), StandardCharsets.UTF_8));
             while ((temp = reader.readLine()) != null) {
                 buildData(temp);
             }
