@@ -16,10 +16,9 @@ import java.util.*;
  */
 public class AddressRandom {
     protected static Map<String, List<MArea>> ALL_AREA = new HashMap<>();
-    private static List<String> REGION_LIST;
-    private static List<MArea> PROVINCE_LIST = new ArrayList<>();
-    private static List<MArea> CITY_LIST = new ArrayList<>();
-    private static List<MArea> COUNTY_LIST = new ArrayList<>();
+    private static final List<MArea> PROVINCE_LIST = new ArrayList<>();
+    private static final List<MArea> CITY_LIST = new ArrayList<>();
+    private static final List<MArea> COUNTY_LIST = new ArrayList<>();
 
     static {
         //初始化省市区
@@ -56,6 +55,17 @@ public class AddressRandom {
             return province.getName() + " " + province.getChild(true).getName();
         }
         return getCity().getName();
+    }
+
+    /**
+     * @param minLon：最小经度 maxLon： 最大经度
+     *                    minLat：最小纬度
+     *                    maxLat：最大纬度
+     * @return @throws
+     * @Description: 在矩形内随机生成经纬度
+     */
+    public static void randomLonLat(double minLon, double maxLon, double minLat, double maxLat) {
+        Random.rDouble(minLon, maxLon);
     }
 
     /**

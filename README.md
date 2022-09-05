@@ -121,4 +121,7 @@ Random.class
 |          | rArrayNext(Collection<? extends T> list, int step)    | 根据步长获取下一个元素           |                                      |
 |          | rArrayCopy(List<T> list, int count)                   | 将集合复制指定次数               |                                      |
 |          | rArrayCopy(List<T> list, int min, int max)            | 将集合复制范围内随机次数         |                                      |
+|          | rMapEntry(Map<K, V> map)                              | 随机获取map中元素                |                                      |
+
+
 

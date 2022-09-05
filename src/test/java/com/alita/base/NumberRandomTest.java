@@ -48,6 +48,7 @@ public class NumberRandomTest {
     @Test
     public void randomDoubleLimit() {
         double v = Random.rDouble(50000);
+        System.out.println(v);
     }
 
     @Test

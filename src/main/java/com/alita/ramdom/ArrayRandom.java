@@ -25,7 +25,7 @@ public class ArrayRandom {
         if (null == list || list.isEmpty()) {
             return null;
         }
-        return getOne(list, Random.rInt(1, list.size() + 1));
+        return getOne(list, Random.rInt(0, list.size()));
     }
 
     /**
@@ -54,7 +54,7 @@ public class ArrayRandom {
     private static <T extends Object & Comparable<? super T>> T getOne(Collection<? extends T> list, int num) {
         Iterator<? extends T> iterator = list.stream().iterator();
         T next = iterator.next();
-        for (int i = 1; i <= list.size(); i++) {
+        for (int i = 0; i < list.size(); i++) {
             if (i == num) {
                 return next;
             }

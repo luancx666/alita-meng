@@ -3,6 +3,7 @@ package com.alita.ramdom;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @Description: 模拟数据总入口
@@ -131,6 +132,16 @@ public class Random {
     }
 
     /**
+     * 指定小数位的随机数
+     *
+     * @param length 长度
+     * @return 随机数
+     */
+    public static double rDouble(int length) {
+        return NumberRandom.randomDouble(length);
+    }
+
+    /**
      * 获得指定范围内的随机数 [0,limit)
      *
      * @param limit 限制随机数的范围，不包括这个数
@@ -138,6 +149,17 @@ public class Random {
      */
     public static double rDouble(double limit) {
         return NumberRandom.randomDouble(limit);
+    }
+
+    /**
+     * 获得指定范围内的随机数 [0,limit)
+     *
+     * @param limit  限制随机数的范围，不包括这个数
+     * @param length 指定长度
+     * @return 随机数
+     */
+    public static double rDouble(double limit, int length) {
+        return NumberRandom.randomDouble(limit, length);
     }
 
     /**
@@ -149,6 +171,18 @@ public class Random {
      */
     public static double rDouble(double min, double max) {
         return NumberRandom.randomDouble(min, max);
+    }
+
+    /**
+     * 获得指定范围内的随机数[min, max)
+     *
+     * @param min    最小数（包含）
+     * @param max    最大数（不包含）
+     * @param length 指定长度
+     * @return 随机数
+     */
+    public static double rDouble(double min, double max, int length) {
+        return NumberRandom.randomDouble(min, max, length);
     }
 
     /**
@@ -803,5 +837,15 @@ public class Random {
      */
     public static <T> List<T> rArrayCopy(List<T> list, int min, int max) {
         return ArrayRandom.randomCopy(list, min, max);
+    }
+
+    /**
+     * 随机从参数中选择一个元素
+     *
+     * @param map map
+     * @return 元素
+     */
+    public static <K, V> Map.Entry<K, V> rMapEntryOne(Map<K, V> map) {
+        return MapRandom.randomEntryOne(map);
     }
 }
