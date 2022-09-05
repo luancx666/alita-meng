@@ -55,6 +55,17 @@
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
+        <!--    geometry    -->
+        <dependency>
+            <groupId>org.geolatte</groupId>
+            <artifactId>geolatte-geom</artifactId>
+            <version>1.8.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.geolatte</groupId>
+            <artifactId>geolatte-geojson</artifactId>
+            <version>1.8.2</version>
+        </dependency>
     </dependencies>
 
     <distributionManagement>
