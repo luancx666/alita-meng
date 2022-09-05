@@ -110,7 +110,7 @@ public class NumberRandom {
      * @return 随机数
      */
     protected static double randomDouble(double limit, int length) {
-        return BaseRandom.getRandom().nextDouble(limit);
+        return doubleLength(BaseRandom.getRandom().nextDouble(limit), length);
     }
 
     /**
@@ -133,7 +133,7 @@ public class NumberRandom {
      * @return 随机数
      */
     protected static double randomDouble(double min, double max, int length) {
-        return BaseRandom.getRandom().nextDouble(min, max);
+        return doubleLength(BaseRandom.getRandom().nextDouble(min, max), length);
     }
 
     /**
