@@ -58,17 +58,6 @@ public class AddressRandom {
     }
 
     /**
-     * @param minLon：最小经度 maxLon： 最大经度
-     *                    minLat：最小纬度
-     *                    maxLat：最大纬度
-     * @return @throws
-     * @Description: 在矩形内随机生成经纬度
-     */
-    public static void randomLonLat(double minLon, double maxLon, double minLat, double maxLat) {
-        Random.rDouble(minLon, maxLon);
-    }
-
-    /**
      * 获取市信息
      *
      * @return 市

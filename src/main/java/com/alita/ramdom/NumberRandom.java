@@ -136,9 +136,10 @@ public class NumberRandom {
         return BaseRandom.getRandom().nextDouble(min, max);
     }
 
+    /**
+     * 四舍五入指定小数位长度
+     */
     private static double doubleLength(double d, int length) {
-        BigDecimal b = new BigDecimal(d);
-        d = b.setScale(length, RoundingMode.HALF_UP).doubleValue();
-        return d;
+        return new BigDecimal(d).setScale(length, RoundingMode.HALF_UP).doubleValue();
     }
 }
