@@ -43,7 +43,7 @@ public class ArrayRandom {
         if (step <= 0) {
             step = 1;
         }
-        while (index > list.size()) {
+        while (index >= list.size()) {
             index = index % list.size();
         }
         T one = getOne(list, index);

@@ -1,6 +1,6 @@
 package com.alita.ramdom;
 
-import com.alita.utils.MUtils;
+import com.alita.utils.MUtil;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -24,7 +24,7 @@ public class DateRandom {
     /**
      * 日期格式化
      */
-    private static Map<String, SimpleDateFormat> DATEFORMAT_MAP = new HashMap<>();
+    private static final Map<String, SimpleDateFormat> DATEFORMAT_MAP = new HashMap<>();
 
     /**
      * 当前时间
@@ -136,7 +136,7 @@ public class DateRandom {
      * @return 日期格式类
      */
     private static SimpleDateFormat getDateFormat(String format) {
-        if (MUtils.isEmpty(format)) {
+        if (MUtil.isEmpty(format)) {
             format = TIME_FORMAT;
         }
         if (DATEFORMAT_MAP.containsKey(format)) {

@@ -1,6 +1,6 @@
 package com.alita.ramdom;
 
-import com.alita.utils.MUtils;
+import com.alita.utils.MUtil;
 
 /**
  * @Description: 身份证
@@ -32,7 +32,7 @@ public class IdCardRandom {
         //设置区号
         cardNo.append(AddressRandom.randomCounty().getCode());
 
-        if (MUtils.isNotEmpty(birthday)) {
+        if (MUtil.isNotEmpty(birthday)) {
             cardNo.append(birthday);
         } else {
             //1970-01-01 08:00:00 ~ 当前

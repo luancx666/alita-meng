@@ -6,7 +6,7 @@ package com.alita.utils;
  * @Date: 2022/02/17
  * @Version: 1.0.0
  */
-public class MUtils {
+public class MUtil {
     public static boolean isEmpty(CharSequence cs) {
         return cs == null || cs.length() == 0;
     }
@@ -23,11 +23,8 @@ public class MUtils {
                     return false;
                 }
             }
-
-            return true;
-        } else {
-            return true;
         }
+        return true;
     }
 
     public static boolean isNotBlank(CharSequence cs) {

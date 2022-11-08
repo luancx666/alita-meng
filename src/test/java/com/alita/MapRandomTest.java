@@ -2,6 +2,7 @@ package com.alita;
 
 import com.alita.ramdom.Random;
 import junit.framework.TestCase;
+import org.junit.Assert;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -24,9 +25,8 @@ public class MapRandomTest extends TestCase {
         Map<String, String> map = getMap();
         for (int i = 0; i < 5; i++) {
             Map.Entry<String, String> one = Random.rMapEntryOne(map);
-            System.out.println("key:" + one.getKey());
-            System.out.println("value:" + one.getValue());
-            System.out.println("======");
+            Assert.assertNotNull(one.getKey());
+            Assert.assertNotNull(one.getValue());
         }
     }
 }
