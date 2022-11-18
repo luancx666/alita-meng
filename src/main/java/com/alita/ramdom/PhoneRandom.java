@@ -31,10 +31,10 @@ public class PhoneRandom {
     protected static String randomPhone(String first) {
         if (null == first || "".equals(first)) {
             first = TEL_FIRST[NumberRandom.randomInt(TEL_FIRST.length)];
-        } else if (first.length() >= 13) {
-            return first.substring(0, 13);
+        } else if (first.length() >= 11) {
+            return first.substring(0, 11);
         }
-        int length = 13 - first.length();
+        int length = 11 - first.length();
         StringBuilder z = new StringBuilder();
         for (int i = 0; i < length; i++) {
             z.append("0");
