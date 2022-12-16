@@ -345,7 +345,7 @@ public class Random {
     //↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓  TEXT  ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 
     /**
-     * 随机生成单词
+     * 随机生成单词 （长度:3-7）
      *
      * @return 随机单词
      */
@@ -789,7 +789,7 @@ public class Random {
      * @param <T>  泛型
      * @return 元素
      */
-    public static <T extends Object & Comparable<? super T>> T rArrayOne(Collection<? extends T> list) {
+    public static <T> T rArrayOne(Collection<T> list) {
         return ArrayRandom.randomOne(list);
     }
 

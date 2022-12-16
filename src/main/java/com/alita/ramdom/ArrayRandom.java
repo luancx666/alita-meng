@@ -21,7 +21,7 @@ public class ArrayRandom {
      * @param <T>  泛型
      * @return 元素
      */
-    protected static <T extends Object & Comparable<? super T>> T randomOne(Collection<? extends T> list) {
+    protected static <T> T randomOne(Collection<T> list) {
         if (null == list || list.isEmpty()) {
             return null;
         }
@@ -51,7 +51,7 @@ public class ArrayRandom {
         return one;
     }
 
-    private static <T extends Object & Comparable<? super T>> T getOne(Collection<? extends T> list, int num) {
+    private static <T> T getOne(Collection<? extends T> list, int num) {
         Iterator<? extends T> iterator = list.stream().iterator();
         T next = iterator.next();
         for (int i = 0; i < list.size(); i++) {
