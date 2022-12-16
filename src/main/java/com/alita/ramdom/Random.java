@@ -794,13 +794,25 @@ public class Random {
     }
 
     /**
+     * 从列表中随机组合指定数量的不重复元素
+     *
+     * @param list 集合
+     * @param size 指定数量
+     * @param <T>  泛型
+     * @return 新集合
+     */
+    public static <T> List<T> rArrayList(List<T> list, int size) {
+        return ArrayRandom.rArrayList(list, size);
+    }
+
+    /**
      * 获取下一个元素
      *
      * @param list 集合
      * @param <T>  泛型
      * @return 元素
      */
-    public static <T extends Object & Comparable<? super T>> T rArrayNext(Collection<? extends T> list) {
+    public static <T> T rArrayNext(Collection<T> list) {
         return ArrayRandom.randomNext(list, 1);
     }
 

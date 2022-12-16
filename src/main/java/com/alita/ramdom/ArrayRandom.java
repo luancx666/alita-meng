@@ -29,6 +29,29 @@ public class ArrayRandom {
     }
 
     /**
+     * 从列表中随机组合指定数量的不重复元素
+     *
+     * @param list 集合
+     * @param size 指定数量
+     * @param <T>  泛型
+     * @return 新集合
+     */
+    public static <T> List<T> rArrayList(List<T> list, int size) {
+        if (null == list || list.isEmpty()) {
+            return new ArrayList<>();
+        }
+        if (list.size() <= size) {
+            return list;
+        }
+        List<T> nList = new ArrayList<>(list);
+        int count = list.size() - size;
+        for (int i = 0; i < count; i++) {
+            nList.remove(Random.rInt(nList.size()));
+        }
+        return nList;
+    }
+
+    /**
      * 根据步长获取下一个元素
      *
      * @param list 集合
@@ -36,7 +59,7 @@ public class ArrayRandom {
      * @param <T>  泛型
      * @return 元素
      */
-    protected static <T extends Object & Comparable<? super T>> T randomNext(Collection<? extends T> list, int step) {
+    protected static <T> T randomNext(Collection<T> list, int step) {
         if (null == list || list.isEmpty()) {
             return null;
         }

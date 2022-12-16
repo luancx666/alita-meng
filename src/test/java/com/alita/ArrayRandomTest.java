@@ -23,6 +23,12 @@ public class ArrayRandomTest extends TestCase {
         }
     }
 
+    public void testRandomList() {
+        List<String> arrayList = Random.rArrayList(list, 3);
+        System.out.println(arrayList);
+        Assert.assertTrue(arrayList.size() == 3 || arrayList.size() == list.size());
+    }
+
     public void testRandomNext() {
         for (int i = 0; i < 10; i++) {
             String s = Random.rArrayNext(list);
